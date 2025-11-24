@@ -46,6 +46,7 @@ If any Error, correct it in code and execute again
 Verify the generated waveform using Tabulation and Model Waveform 
 
 __PROGRAM:__
+```
 PROGRAM: 
 clc 
 clear all; 
@@ -65,7 +66,7 @@ plot(fw);
 fw2=(abs(fw)).^2; 
 subplot(3,2,5); 
 plot(fw2); 
-
+```
 
 __OUTPUT:__
 
