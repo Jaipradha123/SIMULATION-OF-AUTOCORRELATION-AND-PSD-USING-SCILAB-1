@@ -46,7 +46,30 @@ If any Error, correct it in code and execute again
 Verify the generated waveform using Tabulation and Model Waveform 
 
 __PROGRAM:__
+PROGRAM: 
+clc 
+clear all; 
+t=0:0.01:2*pi; 
+x=sin(2*t); 
+subplot(3,2,1); 
+plot(x); 
+au=xcorr(x,x); 
+Subplot (3,2,2); 
+plot (au); 
+v=fft(au); 
+subplot(3,2,3); 
+plot(abs(v)); 
+fw=fft(x); 
+subplot(3,2,4); 
+plot(fw); 
+fw2=(abs(fw)).^2; 
+subplot(3,2,5); 
+plot(fw2); 
+
 
 __OUTPUT:__
 
+![WhatsApp Image 2025-11-19 at 14 49 00_6bff0937](https://github.com/user-attachments/assets/131501c4-69ae-426d-9297-56b6ff3cf5d3)
+
 __RESULT:__
+Thus the auto correlation and psd ec=xecuted in scilab and output is verified
